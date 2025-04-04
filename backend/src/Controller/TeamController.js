@@ -1,5 +1,5 @@
 // src/Controller/TeamController.js
-import { poolPromise } from '../Config/Connection.js';
+import { poolPromise } from '../Config/Connection.js';//sa
 import sql from 'mssql';
 
 export const getWaiters = async (req, res) => {

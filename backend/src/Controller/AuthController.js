@@ -1,7 +1,7 @@
 //AuthController
 import { poolPromise } from '../Config/Connection.js';
 import sql from 'mssql';
-import jwt from 'jsonwebtoken';
+import jwt from 'jsonwebtoken'; 
 import nodemailer from 'nodemailer';  // Importar nodemailer
 
 // Registro de usuario
