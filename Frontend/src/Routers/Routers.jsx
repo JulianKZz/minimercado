@@ -1,17 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Home from '../Pages/Principal';
-import Reservas from "../Pages/Reservas";
-import Conocenos from "../Pages/Conocenos";
+import Inventario from "../Pages/Inventario";
 import Contacto from "../Pages/Contacto";
 import Terminos from "../Pages/Terminos";
 import Privacidad from "../Pages/Privacidad";
 import Login from "../Pages/Login";
 import Registro from "../Pages/Registro";
 import RecuperarContraseña from "../Pages/RecuperarContraseña";
-import Layout from "../Layout/Layout";
-import Principal from "../Pages/Principal";
 import Chefs from "../Pages/Chefs";
-import Meseros from "../Pages/Meseros";
+import Meseros from "../Pages/GestionInventario";
 import MejoresClientes from "../Pages/MejoresClientes";
 
 const Routers = () => {
