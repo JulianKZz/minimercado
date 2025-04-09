@@ -6,7 +6,7 @@ const Header = () => {
     <header className="header">
       {/* Imagen en la parte superior */}
       <div className="header__image-container">
-        <img src="/src/assets/IMG/Restaurante.png" alt="Imagen de Encabezado" className="header__image" />
+        <img src="/src/assets/IMG/Restaurante.jpg" alt="Imagen de Encabezado" className="header__image" />
       </div>
 
       {/* Botones en la parte inferior central */}

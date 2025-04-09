@@ -48,7 +48,7 @@ const handleSubmit = async (event) => {
     <div className="login-page">
       {/* Imagen del restaurante en la parte superior */}
       <div className="login-header">
-        <img src="/src/assets/img/principal.jpg" alt="Restaurante" className="restaurant-image" />
+        <img src="/src/assets/img/inventLogin.jpg" alt="Restaurante" className="restaurant-image" />
       </div>
 
       <h1>Iniciar Sesión</h1>
