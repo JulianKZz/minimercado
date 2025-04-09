@@ -11,6 +11,12 @@ import {
     updateWaiter, updateChef, updateCustomer,
     deleteWaiter, deleteChef, deleteCustomer 
 } from './Controller/TeamController.js';
+import productoRoutes from './Routes/ProductoRoutes.js';
+
+// Manejo de errores no capturados
+process.on('uncaughtException', (error) => {
+    console.error('Error no capturado:', error);
+});
 
 const app = express();
 
@@ -185,6 +191,14 @@ app.get('/api/best_customers', getBestCustomers);
 app.post('/api/best_customers', createCustomer);
 app.put('/api/best_customers/:id', updateCustomer);
 app.delete('/api/best_customers/:id', deleteCustomer);
+
+// Rutas para Productos (Inventario) - Utilizando el enrutador
+app.use('/api', productoRoutes);
+
+// Ruta de prueba
+app.get('/', (req, res) => {
+  res.send('API del Sistema de Inventario funcionando correctamente');
+});
 
 // Iniciar el servidor
 const PORT = 8085;
