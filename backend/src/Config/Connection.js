@@ -3,8 +3,8 @@ import sql from 'mssql';  // Importar el módulo de mssql
 
 // Configuración de la base de datos
 const config = {
-    user: 'Conexion',
-    password: '123',
+    user: 'sa',
+    password: '1234',
     server: 'localhost',
     database: 'React',
     options: {
