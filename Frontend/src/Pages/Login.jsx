@@ -13,7 +13,7 @@ const Login = ({ onLogin }) => {
   const token = localStorage.getItem('token');
   if (token) {
     // Si ya hay token, redirigimos al dashboard
-    navigate('/reservas');
+    navigate('/Principal');
   }
 }, [navigate]);
 
@@ -33,7 +33,7 @@ const handleSubmit = async (event) => {
     if (response && response.token) {
       localStorage.setItem('token', response.token);
       onLogin(response.token);
-      navigate('/reservas');
+      navigate('/');
     } else {
       setErrorMessage('Credenciales inválidas o error en el servidor.');
     }
@@ -48,7 +48,7 @@ const handleSubmit = async (event) => {
     <div className="login-page">
       {/* Imagen del restaurante en la parte superior */}
       <div className="login-header">
-        <img src="/src/assets/img/principal.jpg" alt="Restaurante" className="restaurant-image" />
+        <img src="/src/assets/img/inventariojpg.jpg" alt="Restaurante" className="restaurant-image" />
       </div>
 
       <h1>Iniciar Sesión</h1>

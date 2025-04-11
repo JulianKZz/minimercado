@@ -3,61 +3,61 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8 mt-auto">
+    <footer className="bg-gray-800 text-white py-4 w-full mt-auto">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between">
-          <div className="mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-4">Sistema de Inventario</h3>
-            <p className="text-gray-400">
+        {/* Todo el contenido en una sola fila horizontal */}
+        <div className="flex flex-wrap items-center justify-between">
+          {/* Logo y descripción - más compacto */}
+          <div className="w-auto mr-8">
+            <h3 className="text-lg font-bold inline-block mr-3">Sistema de Inventario</h3>
+            <span className="text-gray-300 text-sm hidden md:inline-block">
               Gestiona eficientemente el inventario de tu restaurante
-            </p>
+            </span>
           </div>
-          
-          <div className="mb-6 md:mb-0">
-            <h4 className="text-lg font-semibold mb-3">Enlaces rápidos</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-400 hover:text-white">
+
+          {/* Enlaces rápidos - en línea */}
+          <div className="w-auto flex items-center">
+            <span className="text-sm font-medium mr-2">Enlaces:</span>
+            <ul className="flex">
+              <li className="mr-4">
+                <Link to="/inicio" className="text-gray-300 hover:text-white text-sm">
                   Inicio
                 </Link>
               </li>
-              <li>
-                <Link to="/inventario" className="text-gray-400 hover:text-white">
+              <li className="mr-4">
+                <Link to="/inventario" className="text-gray-300 hover:text-white text-sm">
                   Inventario
                 </Link>
               </li>
-              <li>
-                <Link to="/gestion-inventario" className="text-gray-400 hover:text-white">
-                  Gestión de Inventario
-                </Link>
-              </li>
-              <li>
-                <Link to="/chefs" className="text-gray-400 hover:text-white">
-                  Chefs
+              <li className="mr-4">
+                <Link to="/gestion-inventario" className="text-gray-300 hover:text-white text-sm">
+                  Gestión
                 </Link>
               </li>
             </ul>
           </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-3">Legal</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/terminos" className="text-gray-400 hover:text-white">
-                  Términos y condiciones
+
+          {/* Legal - en línea */}
+          <div className="w-auto flex items-center">
+            <span className="text-sm font-medium mr-2">Legal:</span>
+            <ul className="flex">
+              <li className="mr-4">
+                <Link to="/terminos" className="text-gray-300 hover:text-white text-sm">
+                  Términos
                 </Link>
               </li>
               <li>
-                <Link to="/privacidad" className="text-gray-400 hover:text-white">
-                  Política de privacidad
+                <Link to="/privacidad" className="text-gray-300 hover:text-white text-sm">
+                  Privacidad
                 </Link>
               </li>
             </ul>
           </div>
-        </div>
-        
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Sistema de Inventario. Todos los derechos reservados.</p>
+
+          {/* Copyright - integrado en la misma línea */}
+          <div className="w-auto text-right">
+            <p className="text-gray-300 text-xs">&copy; {new Date().getFullYear()} Sistema de Inventario</p>
+          </div>
         </div>
       </div>
     </footer>
