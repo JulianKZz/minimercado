@@ -23,7 +23,7 @@ function App() {
 
         {/* Rutas con layout */}
         <Route path="/" element={<Layout />}>
-          <Route index element={<Login />} />
+          <Route index element={<Principal />} />
           <Route path="Principal" element={<Principal />} />
           <Route path="inventario" element={<Inventario />} />
           <Route path="agregar-producto" element={<AgregarProducto />} />

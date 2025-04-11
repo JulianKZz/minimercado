@@ -1,0 +1,164 @@
+/* Estilos generales */
+.principal-container {
+    min-height: 100vh;
+    padding: 40px 16px;
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+  }
+  
+  /* Estilos para la sección héroe */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3a3a3a;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin-bottom: 48px;
+  }
+  
+  .hero-content {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  
+  .hero-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+  }
+  
+  .hero-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Estilos para las tarjetas */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+  
+  .card {
+    background-color: #3a3a3a;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #606060;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .card-description {
+    margin-bottom: 24px;
+  }
+  
+  /* Estilos para botones */
+  .btn-primary {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+  }
+  
+  .btn-blue {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 500;
+    padding: 10px 0;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .btn-blue:hover {
+    background-color: #2563eb;
+  }
+  
+  .btn-yellow {
+    background-color: #eab308;
+    color: white;
+    font-weight: 500;
+    padding: 10px 0;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .btn-yellow:hover {
+    background-color: #ca8a04;
+  }
+
+  .btn-red {
+    background-color: #ea0808;
+    color: white;
+    font-weight: 500;
+    padding: 10px 0;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .btn-red:hover {
+    background-color: #ca4304;
+  }
+  
+  /* Media queries para diseño responsive */
+  @media (min-width: 768px) {
+    .hero-section {
+      flex-direction: row;
+    }
+    
+    .hero-content {
+      width: 66.666%;
+      margin-bottom: 0;
+    }
+    
+    .hero-action {
+      width: 33.333%;
+    }
+    
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
