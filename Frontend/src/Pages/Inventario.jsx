@@ -1,7 +1,7 @@
 import ReservationForm from '../components/ReservationForm';
 import AvailabilityChecker from '../components/AvailabilityChecker';
 import React, { useEffect, useState } from 'react';
-import '../assets/Styles/Styles.css'; // Asegúrate de importar tu archivo de estilos
+import '../assets/Styles/Inventario.css'; // Asegúrate de importar tu archivo de estilos
 
 const Inventario = () => {
   const [productos, setProductos] = useState([]);

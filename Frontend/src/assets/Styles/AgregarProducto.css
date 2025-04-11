@@ -1,0 +1,133 @@
+/* Contenedor principal */
+.ap-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Título principal */
+  .ap-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Tarjeta contenedora */
+  .ap-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Encabezado de la tarjeta */
+  .ap-card-header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  .ap-card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  /* Cuerpo de la tarjeta */
+  .ap-card-body {
+    padding: 20px;
+  }
+  
+  /* Alertas */
+  .ap-alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .ap-alert-error {
+    background-color: #F8D7DA;
+    border: 1px solid #F5C6CB;
+    color: #721C24;
+  }
+  
+  .ap-alert-success {
+    background-color: #D4EDDA;
+    border: 1px solid #C3E6CB;
+    color: #155724;
+  }
+  
+  /* Formulario */
+  .ap-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Grupo de cada input */
+  .ap-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ap-form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+  
+  .ap-form-group input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Fila para inputs lado a lado */
+  .ap-form-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .ap-form-row .ap-form-group {
+    flex: 1;
+  }
+  
+  /* Contenedor de botones */
+  .ap-button-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Botones */
+  .ap-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .ap-button-cancel {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .ap-button-cancel:hover {
+    background-color: #b3b3b3;
+  }
+  
+  .ap-button-submit {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .ap-button-submit:hover {
+    background-color: #45a044;
+  }
+  

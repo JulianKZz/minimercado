@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../assets/Styles/AgregarProducto.css'; // Importa el archivo de estilos
 
-const AgregarProducto = () => {
+const agregarProducto = () => {
     const [producto, setProducto] = useState({ 
         nombre: '', 
         categoria: '', 
@@ -67,112 +68,95 @@ const AgregarProducto = () => {
     };
 
     return (
-        <div className="container mx-auto py-8 px-4">
-            <h1 className="text-3xl font-bold text-center mb-8">Añadir Nuevo Producto</h1>
+        <div className="ap-container">
+            <h1 className="ap-title">Añadir Nuevo Producto</h1>
             
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-2xl mx-auto">
-                <div className="bg-green-600 text-white p-4">
-                    <h2 className="text-xl font-semibold">
-                        Ingrese los detalles del producto
-                    </h2>
+            <div className="ap-card">
+                <div className="ap-card-header">
+                    <h2>Ingrese los detalles del producto</h2>
                 </div>
                 
-                <div className="p-6">
+                <div className="ap-card-body">
                     {error && (
-                        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                        <div className="ap-alert ap-alert-error">
                             <p>{error}</p>
                         </div>
                     )}
                     
                     {success && (
-                        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                        <div className="ap-alert ap-alert-success">
                             <p>Producto agregado exitosamente. Redirigiendo...</p>
                         </div>
                     )}
                     
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <div>
-                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nombre">
-                                Nombre del Producto
-                            </label>
+                    <form onSubmit={handleSubmit} className="ap-form">
+                        <div className="ap-form-group">
+                            <label htmlFor="nombre">Nombre del Producto</label>
                             <input
                                 type="text"
                                 id="nombre"
                                 name="nombre"
                                 placeholder="Nombre del producto"
-                                className="px-4 py-2 border border-gray-300 rounded-md w-full"
                                 value={producto.nombre}
                                 onChange={handleChange}
                             />
                         </div>
                         
-                        <div>
-                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="categoria">
-                                Categoría
-                            </label>
+                        <div className="ap-form-group">
+                            <label htmlFor="categoria">Categoría</label>
                             <input
                                 type="text"
                                 id="categoria"
                                 name="categoria"
                                 placeholder="Categoría del producto"
-                                className="px-4 py-2 border border-gray-300 rounded-md w-full"
                                 value={producto.categoria}
                                 onChange={handleChange}
                             />
                         </div>
                         
-                        <div className="grid grid-cols-2 gap-4">
-                            <div>
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cantidad">
-                                    Cantidad
-                                </label>
+                        <div className="ap-form-row">
+                            <div className="ap-form-group">
+                                <label htmlFor="cantidad">Cantidad</label>
                                 <input
                                     type="number"
                                     id="cantidad"
                                     name="cantidad"
                                     placeholder="Cantidad"
-                                    className="px-4 py-2 border border-gray-300 rounded-md w-full"
                                     value={producto.cantidad}
                                     onChange={handleChange}
                                 />
                             </div>
                             
-                            <div>
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="unidad">
-                                    Unidad
-                                </label>
+                            <div className="ap-form-group">
+                                <label htmlFor="unidad">Unidad</label>
                                 <input
                                     type="text"
                                     id="unidad"
                                     name="unidad"
                                     placeholder="kg, l, unidades, etc."
-                                    className="px-4 py-2 border border-gray-300 rounded-md w-full"
                                     value={producto.unidad}
                                     onChange={handleChange}
                                 />
                             </div>
                         </div>
                         
-                        <div>
-                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="precio">
-                                Precio
-                            </label>
+                        <div className="ap-form-group">
+                            <label htmlFor="precio">Precio</label>
                             <input
                                 type="number"
                                 id="precio"
                                 name="precio"
                                 step="0.01"
                                 placeholder="Precio"
-                                className="px-4 py-2 border border-gray-300 rounded-md w-full"
                                 value={producto.precio}
                                 onChange={handleChange}
                             />
                         </div>
                         
-                        <div className="flex justify-end gap-4 mt-6">
+                        <div className="ap-button-row">
                             <button
                                 type="button"
-                                className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
+                                className="ap-button ap-button-cancel"
                                 onClick={() => navigate('/inventario')}
                             >
                                 Cancelar
@@ -180,7 +164,7 @@ const AgregarProducto = () => {
                             
                             <button
                                 type="submit"
-                                className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+                                className="ap-button ap-button-submit"
                                 disabled={loading}
                             >
                                 {loading ? 'Agregando...' : 'Agregar Producto'}
@@ -193,4 +177,4 @@ const AgregarProducto = () => {
     );
 };
 
-export default AgregarProducto;
+export default agregarProducto;
