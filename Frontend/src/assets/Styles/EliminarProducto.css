@@ -1,0 +1,117 @@
+.eliminar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.eliminar-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.eliminar-card {
+    background-color: #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.eliminar-header {
+    background-color: #dc2626;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.eliminar-body {
+    padding: 1.5rem;
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.eliminar-input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    background-color: #1f2937;
+    color: white;
+}
+
+.mensaje-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #fca5a5;
+}
+
+.mensaje-exito {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #6ee7b7;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.eliminar-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1f2937;
+    color: white;
+}
+
+.eliminar-table th,
+.eliminar-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #374151;
+}
+
+.eliminar-table th {
+    background-color: #374151;
+    font-weight: 600;
+    color: #d1d5db;
+}
+
+.eliminar-table tr:hover {
+    background-color: #2d3748;
+}
+
+.eliminar-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.eliminar-btn-red {
+    background-color: #dc2626;
+    color: white;
+}
+
+.eliminar-btn-red:hover {
+    background-color: #b91c1c;
+}
+
+.volver-btn {
+    background-color: #2563eb;
+    color: white;
+    margin-bottom: 1.5rem;
+    float: right;
+}
+
+.volver-btn:hover {
+    background-color: #1d4ed8;
+}
